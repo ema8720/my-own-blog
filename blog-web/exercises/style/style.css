@@ -7,15 +7,19 @@ body {
     text-decoration: none;
 }
 
+.home-page header, .new-post-page header  {
+    background-image: url(/assets/banner.jpeg);
+}
+
 header {
    min-height: 350px;
-   background-color: blue;
+   /* background-color: blue; */
    color: white;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-image: url(/assets/banner.jpeg);
+  
    background-size: cover;
    background-position: center;
    position: relative;
@@ -42,7 +46,7 @@ header > * {
     background-size: cover;
 }
 
-.profile-name {
+.profile-name, .title {
    font-size: 3em; 
    font-weight: bold;
 }
@@ -170,3 +174,8 @@ footer {
 
 
 }
+
+a.post-link {
+    text-decoration: none;
+}
+

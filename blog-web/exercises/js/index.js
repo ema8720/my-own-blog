@@ -22,10 +22,10 @@ const buildPosts = (blogPosts) => {
     for (blogPost of blogPosts) {
         const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
         const postImage = `${API_BASE_URL}${blogPost.post_image}`;
-        
+        const postLink = `/post.html?id=${blogPost.id}`
         blogPostsContent += `
+            <a class="post-link "href="${postLink}">
             <div class="post">
-           
             <div class="post-image" style="background-image: url(${postImage})"></div>
             <div class="post-content">
                 <div class="post-date">${postDate}</div>
@@ -35,6 +35,7 @@ const buildPosts = (blogPosts) => {
         </div>
         `
     }
+    // this class will display the 
     document.querySelector('.blog-posts').innerHTML= blogPostsContent;
 }
 

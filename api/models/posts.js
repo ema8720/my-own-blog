@@ -15,7 +15,7 @@ class Post {
              post.id === postId
              
         )
-        return foundPost
+        return foundPost 
         
     }
     add(newPost) {
